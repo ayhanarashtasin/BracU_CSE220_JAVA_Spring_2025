@@ -7,6 +7,11 @@ class ListNode{
     }
 }
 public class Main{
+    public static void main(String[] args){
+        ListNode head = createLinkedList(10, 20, 30, 40, 50,60,70,80,90,100);
+        printLinkedList(head);
+    }
+    
     public static ListNode createLinkedList(int... values){
         ListNode head = new ListNode(values[0]);
         ListNode current = head;
@@ -16,10 +21,7 @@ public class Main{
         }
         return head;
     }
-    public static void main(String[] args){
-        ListNode head = createLinkedList(10, 20, 30, 40, 50,60,70,80,90,100);
-        printLinkedList(head);
-    }
+    
     public static void printLinkedList(ListNode head){
         ListNode current = head;
         while(current != null){
