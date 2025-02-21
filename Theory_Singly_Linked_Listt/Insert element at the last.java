@@ -1,4 +1,4 @@
-public static void InserLast(ListNode head, int val){
+public static void InsertLast(ListNode head, int val){
         ListNode newNode = new ListNode(val);
         ListNode temp = head;
         while(temp.next!=null){
