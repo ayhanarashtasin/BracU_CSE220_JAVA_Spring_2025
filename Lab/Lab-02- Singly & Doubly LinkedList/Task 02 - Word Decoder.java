@@ -7,7 +7,7 @@ public class Task2 {
             count++;
             temp = temp.next;
         }
-        int l = count%13;
+        int l = 13%count;
         Node current = head;
         Node prev = null;
         Node dummy = new Node(null)
