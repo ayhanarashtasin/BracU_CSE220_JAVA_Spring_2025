@@ -10,17 +10,19 @@ public class Task2 {
         int l = count%13;
         Node current = head;
         Node prev = null;
+        Node dummy = new Node(null)
         int index=0;
         while(current!=null){
-            index++;
-            if (index%l==0){
+            if (index%l==0 && index!=0){
                 Node New_Node = new Node(current.elem);
                 New_Node.next = prev;
                 prev = New_Node;
             }
+            index++;
             current = current.next;
         }
-        return prev;
+        dummy.next = prev
+        return dummy;
     }
 
     //NOTE: if you find any issue with the driver code please inform AIB
