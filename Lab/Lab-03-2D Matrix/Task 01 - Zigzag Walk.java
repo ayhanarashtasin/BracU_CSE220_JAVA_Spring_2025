@@ -1,8 +1,8 @@
 import java.util.Arrays;
 public class ZigzagWalk {
     public static void walkZigzag(int[][] matrix) {
-        int row = matrix.length;        // Number of rows
-        int col = matrix[0].length;     // Number of columns
+        int row = matrix.length;
+        int col = matrix[0].length;
         int top = 0;
         int bottom = row - 1;
         int left = 0;
