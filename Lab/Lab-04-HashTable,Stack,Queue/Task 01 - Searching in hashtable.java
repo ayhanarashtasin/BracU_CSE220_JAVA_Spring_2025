@@ -17,8 +17,8 @@ public String searchHashtable( Object[] keyValuePair ){
     int index = hashFunction(key);
     if (index >= 0 && index < ht.length && ht[index] != null) {
         PairNode temp = ht[index];
-        while (current != null) {
-            if (current.key.equals(key)) {
+        while (temp != null) {
+            if (temp.key.equals(key)) {
                 return "Found";
             }
             temp = temp.next;
