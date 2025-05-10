@@ -42,3 +42,47 @@ public class Main {
         return maxvertex;
     }
 }
+
+
+//Matrix
+public class Main {
+    public static void main(String[] args) {
+        int[][] edges = {
+            {1, 3, 1}, {1, 5, 1}, {1, 7, 1}, {2, 4, 1}, {2, 6, 1},
+            {3, 5, 1}, {7, 2, 1}, {6, 5, 1}, {6, 3, 1}, {6, 1, 1},
+            {12, 2, 1}, {12, 4, 1}, {12, 9, 1}, {12, 8, 1}, {11, 7, 1},
+            {10, 8, 1}, {9, 11, 1}, {1, 10, 1}, {4, 5, 1}, {7, 6, 1},
+            {11, 10, 1}
+        };
+        int Vertices = 12;
+        int[][] adjMatrix = new int[Vertices + 1][Vertices + 1];
+
+        for (int[] edge : edges) {
+            int u = edge[0];
+            int v = edge[1];
+            int weight = edge[2];
+            adjMatrix[u][v] = weight;
+            adjMatrix[v][u] = weight;
+        }
+
+        System.out.println(maximumEdgeWeight(adjMatrix, Vertices));
+    }
+
+    public static int maximumEdgeWeight(int[][] adjMatrix, int Vertices) {
+        int maxsum = Integer.MIN_VALUE;
+        int maxvertex = -1;
+
+        for (int i = 1; i <= Vertices; i++) {
+            int sum = 0;
+            for (int j = 1; j <= Vertices; j++) {
+                sum += adjMatrix[i][j];
+            }
+            if (sum > maxsum) {
+                    maxsum = sum;
+                    maxvertex = i;
+            }
+        }
+
+        return maxvertex;
+    }
+}
