@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class Matrix {
-    public static int MatrixLowerTriangle(int[][] matrix, int target) {
+    public static int MatrixLowerTriangle(int[][] matrix) {
         int n=matrix.length;
         int lowertriangle=0;
         for(int i=0; i<n; i++){
@@ -19,6 +19,6 @@ public class Matrix {
             {20, 23, 30}
         };
         int target = 16;
-        System.out.println(MatrixLowerTriangle(matrix, target));
+        System.out.println(MatrixLowerTriangle(matrix));
     }
 }
