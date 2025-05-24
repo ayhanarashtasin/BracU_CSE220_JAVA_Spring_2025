@@ -18,7 +18,6 @@ public class Matrix {
             {10, 11, 16},
             {20, 23, 30}
         };
-        int target = 16;
         System.out.println(MatrixUpperTriangle(matrix));
     }
 }
