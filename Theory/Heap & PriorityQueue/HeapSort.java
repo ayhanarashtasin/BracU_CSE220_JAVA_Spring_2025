@@ -14,6 +14,7 @@ public class Main {
       int temp=arr[i];
       arr[i]=arr[largest];
       arr[largest]=temp;
+      heapify(arr,i,0);
     }
   }
   public static void heapsort(int[] arr){
