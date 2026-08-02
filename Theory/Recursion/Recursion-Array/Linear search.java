@@ -4,7 +4,7 @@ public class Main {
         System.out.println(Search(arr,0,12));
     }
     static int Search(int[] arr,int index,int target){
-        if(arr.length-1 == index){
+        if(arr.length == index){
             return -1;
         }
         if(arr[index] == target){
